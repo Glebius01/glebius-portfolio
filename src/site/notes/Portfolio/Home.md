@@ -12,7 +12,7 @@ You have probably received this link via my resume. Please feel free to look thr
 ###### Solved Challenges:
 - [[Portfolio/I-like-to\|I-like-to]]
 - [[Portfolio/Meerkat\|Meerkat]]
-- [[Portfolio/TryHackMe Splunk2\|TryHackMe Splunk2]]
+- [[Portfolio/TryHackMe Splunk2 1\|TryHackMe Splunk2 1]]
 
 ###### Course Notes and Artifacts:
 [[Portfolio/Boss of the Splunk. Investigating an APT\|Boss of the Splunk. Investigating an APT]]
