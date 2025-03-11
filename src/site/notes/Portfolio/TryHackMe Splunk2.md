@@ -3,25 +3,30 @@
 ---
 
 ### Scenario:
+
 In this exercise, you assume the persona of Alice Bluebird, the analyst who successfully assisted Wayne Enterprises and was recommended to Grace Hoppy at Frothly (_a beer company_) to assist them with their recent issues.
 ### Walkthrough:
 #### 100-series questions
 
 Search the botsv2 index and return a listing of all the source types that can be found as well as a count of events and the first time and last time seen.
 
-| metadata type=sourcetypes index=botsv2 | eval firstTime=strftime(firstTime,"%Y-%m-%d %H:%M:%S") | eval lastTime=strftime(lastTime,"%Y-%m-%d %H:%M:%S") | eval recentTime=strftime(recentTime,"%Y-%m-%d %H:%M:%S") | sort - totalCount
+	 | metadata type=sourcetypes index=botsv2 | eval 
+	 firstTime=strftime(firstTime,"%Y-%m-%d %H:%M:%S") | eval 
+	 lastTime=strftime(lastTime,"%Y-%m-%d %H:%M:%S") | eval 
+	 recentTime=strftime(recentTime,"%Y-%m-%d %H:%M:%S") | sort - totalCount
 
 Amber Turing was hoping for Frothly to be acquired by a potential competitor which fell through, but visited their website to find contact information for their executive team. What is the website domain that she visited?
 
-index="botsv2" sourcetype="stream:http" src_ip="10.0.2.101" 
-| dedup site
-| table site, _time
+	index="botsv2" sourcetype="stream:http" src_ip="10.0.2.101" 
+	| dedup site
+	| table site, _time
 
 Answer: www.berkbeer.com
 
 Amber found the executive contact information and sent him an email. What image file displayed the executive's contact information? Answer example: /path/image.ext
 
-index="botsv2" sourcetype="stream:http" src_ip="10.0.2.101"  site="www.berkbeer.com" | table uri_path
+	index="botsv2" sourcetype="stream:http" src_ip="10.0.2.101"  
+	site="www.berkbeer.com" | table uri_path
 
 Answer: /images/ceoberk.png
 
