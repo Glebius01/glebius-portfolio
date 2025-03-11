@@ -30,7 +30,7 @@
 	Answer: Ruby
 
 4. *When was the ASPX webshell uploaded by the attacker?*
-	Using Timeline Explorer, I returned to the first file I had found, looked at its entry number and investigated its timestamps using MFTECmd (particular attention to $FILE_NAME or 0x30 information) to identify the time when the script was uploaded.
+	Using Timeline Explorer, I returned to the first file I had found, looked at its entry number and investigated its timestamps, then used MFTECmd (particular attention to $FILE_NAME or 0x30 information) to identify the time when the script was uploaded.
 	
 	Answer: 12/07/2023 11:24:30
 	
